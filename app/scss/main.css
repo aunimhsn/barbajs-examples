@@ -1,0 +1,59 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins';
+  height: 100vh;
+  background: #ddd;
+}
+
+.wrapper {
+  padding: 1em;
+}
+
+ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li a {
+  margin-right: 2em;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.cta {
+  display: block;
+  padding: 2em 2em 2em 0;
+  font-size: 1.4em;
+}
+
+div.transition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  pointer-events: none;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  background: white;
+}
+/*# sourceMappingURL=main.css.map */
