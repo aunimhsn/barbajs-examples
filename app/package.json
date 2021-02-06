@@ -1,0 +1,21 @@
+{
+  "name": "barbajs-examples",
+  "version": "1.0.0",
+  "description": "Badass transitions with barbajs",
+  "main": "index.js",
+  "repository": "https://github.com/aunimhsn/barbajs-examples",
+  "author": "aunimhsn",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode=development",
+    "watch": "webpack watch --mode=development"
+  },
+  "dependencies": {
+    "@barba/core": "^2.9.7",
+    "gsap": "^3.6.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.21.1",
+    "webpack-cli": "^4.5.0"
+  }
+}
