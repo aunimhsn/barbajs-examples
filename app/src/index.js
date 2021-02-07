@@ -1,26 +1,24 @@
 import barba from '@barba/core';
 import gsap from 'gsap';
 
-const animationEnter = (container) => {
-    return gsap.from(container, { opacity: 0, duration: 2, clearProps: 'all', ease:'none' })
-};
 
-const animationLeave = (container) => {
-    return gsap.to(container, { opacity: 0, duration: 2, clearProps: 'all', ease:'none' })
-};
+import animationEnter from './animations/animationEnter';
+import animationLeave from './animations/animationLeave';
+
 
 barba.init({
 
     transitions: [
         {
-            once({next}) {
-                animationEnter(next.container);
+            once() {;
+                // On page load...
             },
 
-            leave: ({current}) => animationLeave(current.container),
+            leave: () => animationLeave(),
 
-            enter({next}) {
-                animationEnter(next.container);
+
+            enter() {
+                animationEnter();
             },
         }
     ]

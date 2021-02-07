@@ -52,6 +52,28 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/animations/animationEnter.js":
+/*!******************************************!*\
+  !*** ./src/animations/animationEnter.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ \"./node_modules/gsap/index.js\");\n\r\n\r\nconst animationEnter = () => {\r\n    return gsap__WEBPACK_IMPORTED_MODULE_0__.default.to('.transition', { scaleX: 0, transformOrigin: 'right', duration: .8, ease:'ExpoIn' });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (animationEnter);\n\n//# sourceURL=webpack://barbajs-examples/./src/animations/animationEnter.js?");
+
+/***/ }),
+
+/***/ "./src/animations/animationLeave.js":
+/*!******************************************!*\
+  !*** ./src/animations/animationLeave.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ \"./node_modules/gsap/index.js\");\n\r\n\r\nconst animationLeave = () => {   \r\n    return gsap__WEBPACK_IMPORTED_MODULE_0__.default.to('.transition', { scaleX: 1, transformOrigin: 'left', duration: .8, ease:'ExpoOut' });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (animationLeave);\n\n//# sourceURL=webpack://barbajs-examples/./src/animations/animationLeave.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -59,7 +81,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _barba_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @barba/core */ \"./node_modules/@barba/core/dist/barba.umd.js\");\n/* harmony import */ var _barba_core__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_barba_core__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ \"./node_modules/gsap/index.js\");\n\r\n\r\n\r\nconst animationEnter = (container) => {\r\n    return gsap__WEBPACK_IMPORTED_MODULE_1__.default.from(container, { opacity: 0, duration: 2, clearProps: 'all', ease:'none' })\r\n};\r\n\r\nconst animationLeave = (container) => {\r\n    return gsap__WEBPACK_IMPORTED_MODULE_1__.default.to(container, { opacity: 0, duration: 2, clearProps: 'all', ease:'none' })\r\n};\r\n\r\n_barba_core__WEBPACK_IMPORTED_MODULE_0___default().init({\r\n\r\n    transitions: [\r\n        {\r\n            once({next}) {\r\n                animationEnter(next.container);\r\n            },\r\n\r\n            leave: ({current}) => animationLeave(current.container),\r\n\r\n            enter({next}) {\r\n                animationEnter(next.container);\r\n            },\r\n        }\r\n    ]\r\n\r\n});\n\n//# sourceURL=webpack://barbajs-examples/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _barba_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @barba/core */ \"./node_modules/@barba/core/dist/barba.umd.js\");\n/* harmony import */ var _barba_core__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_barba_core__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _animations_animationEnter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./animations/animationEnter */ \"./src/animations/animationEnter.js\");\n/* harmony import */ var _animations_animationLeave__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./animations/animationLeave */ \"./src/animations/animationLeave.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n_barba_core__WEBPACK_IMPORTED_MODULE_0___default().init({\r\n\r\n    transitions: [\r\n        {\r\n            once() {;\r\n                // On page load...\r\n            },\r\n\r\n            leave: () => (0,_animations_animationLeave__WEBPACK_IMPORTED_MODULE_2__.default)(),\r\n\r\n\r\n            enter() {\r\n                (0,_animations_animationEnter__WEBPACK_IMPORTED_MODULE_1__.default)();\r\n            },\r\n        }\r\n    ]\r\n\r\n});\n\n//# sourceURL=webpack://barbajs-examples/./src/index.js?");
 
 /***/ })
 
